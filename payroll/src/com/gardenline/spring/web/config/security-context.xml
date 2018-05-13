@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security 
+		http://www.springframework.org/schema/security/spring-security-4.1.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd" >
+
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="dataSource"
+				authorities-by-username-query='select username, authority from users where binary username = ?'
+				users-by-username-query='select username,password, enabled from users where binary username = ?'
+				id="jdbcUserService" />
+			<security:password-encoder ref="passwordEncoder"></security:password-encoder>
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<security:http use-expressions="true" auto-config="true">
+		<security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/editUser" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/docreate" access="isAuthenticated()" />
+		<security:intercept-url pattern="/save" access="isAuthenticated()" />
+		<security:intercept-url pattern="/pagat" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allpagat" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/editbank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addbank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addEmployeeBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createEmployeeBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editEmployeeBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/deleteEmployeeBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/empbanks" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allempbanks" access="isAuthenticated()" />
+		<security:intercept-url pattern="/banks" access="isAuthenticated()" />
+		<security:intercept-url pattern="/saveBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/updateBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addpage" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/createpage" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/employee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/viewEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/newemployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addEmployeeJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createEmployeeJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editEmployeeJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/deleteEmployeeJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allempjobs" access="isAuthenticated()" />
+		<security:intercept-url pattern="/empjobs" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allempsalaries" access="isAuthenticated()" />
+		<security:intercept-url pattern="/empsalaries" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addEmpSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createEmpSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="deleteEmpSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editEmpSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/changeSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addEmployeeEnabled" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createEmployeeEnabled" access="isAuthenticated()" />
+		<security:intercept-url pattern="/aktivpasivet" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/addaktivpasiv" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/editaktivpasiv" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/editPagen" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/deletePagen" access="hasAnyRole('ROLE_ADMIN', 'ROLE_DBA')" />
+		<security:intercept-url pattern="/pagesat" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addpagesen" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createpagesen" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editpagesen" access="isAuthenticated()" />
+		<security:intercept-url pattern="/deletepagesen" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editrecupero" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addrecupero" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createrecupero" access="isAuthenticated()" />
+		<security:intercept-url pattern="/editrecupero" access="isAuthenticated()" />
+		<security:intercept-url pattern="/deletecupero" access="isAuthenticated()" />
+		<security:intercept-url pattern="/recuperot" access="isAuthenticated()" />
+		<security:intercept-url pattern="/year" access="isAuthenticated()" />
+		<security:intercept-url pattern="/years" access="isAuthenticated()" />
+		<security:intercept-url pattern="/search" access="isAuthenticated()" />
+		<security:intercept-url pattern="/result" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchWorkingsDays" access="isAuthenticated()" />
+		<security:intercept-url pattern="/resultWorkingsDays" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchregister" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchpaga" access="isAuthenticated()" />
+		<security:intercept-url pattern="/employeesalarystanding" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allempsalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/workingdaystanding" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allworkingsday" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchRaport" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchRaportEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/getRaportEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchpagaemployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/offercreated" access="isAuthenticated()" />
+		<security:intercept-url pattern="/saveYear" access="isAuthenticated()" />
+		<security:intercept-url pattern="/edityear" access="isAuthenticated()" />
+		<security:intercept-url pattern="/allempenabled" access="isAuthenticated()" />
+		<security:intercept-url pattern="/empenables" access="isAuthenticated()" />
+		<security:intercept-url pattern="/employees" access="isAuthenticated()" />
+		<security:intercept-url pattern="/reportEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/reportEmpJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/reportRecuperot" access="isAuthenticated()" />
+		<security:intercept-url pattern="/reportOfPresence" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchEnabledEmployees" access="isAuthenticated()" />
+		<security:intercept-url pattern="/enabledEmployees" access="isAuthenticated()" />
+		<security:intercept-url pattern="/createemployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/searchenablededemployees" access="isAuthenticated()" />
+		<security:intercept-url pattern="/enablededemployees" access="isAuthenticated()" />
+		<security:intercept-url pattern="/jobs" access="isAuthenticated()" />
+		<security:intercept-url pattern="/update" access="isAuthenticated()" />
+		<security:intercept-url pattern="/save" access="isAuthenticated()" />
+		<security:intercept-url pattern="/kantiere" access="isAuthenticated()" />
+		<security:intercept-url pattern="/updatekantier" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addkantier" access="isAuthenticated()" />
+		<security:intercept-url pattern="/deletekantier" access="isAuthenticated()" />
+		<security:intercept-url pattern="/addkantierform" access="isAuthenticated()" />
+		<security:intercept-url pattern="/newemployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadFile" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUpload" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadpagesen" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUploadPagesen" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUploadSalary" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadEmployeeJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUploadEmployeeJob" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadEmployeeBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUploadEmployeeBank" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadEmployeeEnabled" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUploadEmployeeEnabled" access="isAuthenticated()" />
+		<security:intercept-url pattern="/uploadEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/doUploadEmployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/generateprecenceemployee" access="isAuthenticated()" />
+		<security:intercept-url pattern="/" access="permitAll" />
+		<security:intercept-url pattern="/message" access="permitAll" />
+		<security:intercept-url pattern="/parameterreq" access="permitAll" />
+		<security:intercept-url pattern="/deneid" access="permitAll" />
+		<security:intercept-url pattern="/newaccount" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/createaccount" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/accountcreated" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/static/**" access="permitAll" />
+		<security:intercept-url pattern="/login" access="permitAll" />
+		<!-- <security:intercept-url pattern="/**" access="isAuthenticated()" />  -->
+		<security:form-login login-page="/login"
+		login-processing-url="/j_spring_security_check"
+		username-parameter="username"
+        password-parameter="password"
+		authentication-failure-url="/login?error=true"
+		/>
+		<security:logout  logout-success-url="/login?logout" logout-url="/j_spring_security_logout"/>
+		<security:csrf disabled="true"/>
+		<security:access-denied-handler error-page="/deneid" />
+		<security:remember-me key="offersAppKey"
+			user-service-ref="jdbcUserService" />
+	</security:http>
+	<security:global-method-security secured-annotations="enabled"></security:global-method-security>
+	<bean id="passwordEncoder"
+		class="org.springframework.security.crypto.password.StandardPasswordEncoder">
+	</bean>
+</beans>

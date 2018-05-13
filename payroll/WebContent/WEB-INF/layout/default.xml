@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="payroll.base" template="/WEB-INF/templates/default.jsp">
+		<put-attribute name="includes" value=""></put-attribute>
+		<put-attribute name="title" value="PayRolle HomePage"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/content.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+
+	</definition>
+	<definition name="home" extends="payroll.base">
+		<put-attribute name="title" value="Payroll HomePage"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+	</definition>
+	<definition name="employees" extends="payroll.base">
+		<put-attribute name="title" value="Employees"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/employees.jsp"></put-attribute>
+	</definition>
+	<definition name="searchenabledemployees" extends="payroll.base">
+		<put-attribute name="title" value="Search Enabled Employees"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/searchenabledemployees.jsp"></put-attribute>
+	</definition>
+		<definition name="viewEmployee" extends="payroll.base">
+		<put-attribute name="title" value="View employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/viewEmployee.jsp"></put-attribute>
+	</definition>
+	<definition name="newemployee" extends="payroll.base">
+		<put-attribute name="title" value="Create employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/newemployee.jsp"></put-attribute>
+	</definition>
+	<definition name="editEmployee" extends="payroll.base">
+		<put-attribute name="title" value="Edit Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editEmployee.jsp"></put-attribute>
+	</definition>
+	<definition name="empjobs" extends="payroll.base">
+		<put-attribute name="title" value="Employee Jobs"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/empjobs.jsp"></put-attribute>
+	</definition>
+	<definition name="empenables" extends="payroll.base">
+		<put-attribute name="title" value="All Enables Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/empenables.jsp"></put-attribute>
+	</definition>
+	<definition name="empsalaries" extends="payroll.base">
+		<put-attribute name="title" value="All Enables Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/empsalaries.jsp"></put-attribute>
+	</definition>
+	<definition name="employeebanks" extends="payroll.base">
+		<put-attribute name="title" value="All Banks Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/employeebanks.jsp"></put-attribute>
+	</definition>
+	<definition name="addEmployeeBank" extends="payroll.base">
+		<put-attribute name="title" value="Add Bank To Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addEmployeeBank.jsp"></put-attribute>
+	</definition>
+	<definition name="editEmployeeBank" extends="payroll.base">
+		<put-attribute name="title" value="Edit Bank To Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editEmployeeBank.jsp"></put-attribute>
+	</definition>
+	<definition name="addEmployeeJob" extends="payroll.base">
+		<put-attribute name="title" value="Add Job To Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addEmployeeJob.jsp"></put-attribute>
+	</definition>
+	<definition name="addEmployeeEnabled" extends="payroll.base">
+		<put-attribute name="title" value="Add Enabled Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addEmployeeEnabled.jsp"></put-attribute>
+	</definition>
+	<definition name="editEmployeeJob" extends="payroll.base">
+		<put-attribute name="title" value="Edit Job To Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editEmployeeJob.jsp"></put-attribute>
+	</definition>
+	<definition name="editEmployeeEnabled" extends="payroll.base">
+		<put-attribute name="title" value="Edit Employee Enabled"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editEmployeeEnabled.jsp"></put-attribute>
+	</definition>
+	<definition name="addEmpSalary" extends="payroll.base">
+		<put-attribute name="title" value="Create Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addEmpSalary.jsp"></put-attribute>
+	</definition>
+	<definition name="editEmpSalary" extends="payroll.base">
+		<put-attribute name="title" value="Change Employee Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editEmpSalary.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="pagat" extends="payroll.base">
+		<put-attribute name="title" value="Pagat"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/pagat.jsp"></put-attribute>
+	</definition>
+
+	<definition name="addpage" extends="payroll.base">
+		<put-attribute name="title" value="Add Pagen"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addpage.jsp"></put-attribute>
+	</definition>
+	<definition name="editPagen" extends="payroll.base">
+		<put-attribute name="title" value="Edit Pagen"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editPagen.jsp"></put-attribute>
+	</definition>
+	<definition name="addbank" extends="payroll.base">
+		<put-attribute name="title" value="Add bank"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addbank.jsp"></put-attribute>
+	</definition>
+		<definition name="editbank" extends="payroll.base">
+		<put-attribute name="title" value="Edit bank"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editbank.jsp"></put-attribute>
+	</definition>
+	<definition name="banks" extends="payroll.base">
+		<put-attribute name="title" value="Banks"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/banks.jsp"></put-attribute>
+	</definition>
+	<definition name="jobs" extends="payroll.base">
+		<put-attribute name="title" value="Jobs"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/jobs.jsp"></put-attribute>
+	</definition>
+	<definition name="form" extends="payroll.base">
+		<put-attribute name="title" value="Jobs"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/form.jsp"></put-attribute>
+	</definition>
+	<definition name="kantiere" extends="payroll.base">
+		<put-attribute name="title" value="Kantiere"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/kantiere.jsp"></put-attribute>
+	</definition>
+	<definition name="kantierform" extends="payroll.base">
+		<put-attribute name="title" value="Kantier Form"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/kantierform.jsp"></put-attribute>
+	</definition>
+		<definition name="addkantierform" extends="payroll.base">
+		<put-attribute name="title" value="Kantier Form"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addkantierform.jsp"></put-attribute>
+	</definition>
+	<definition name="login" extends="payroll.base">
+		<put-attribute name="title" value="Login"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/login.jsp"></put-attribute>
+	</definition>
+
+	<definition name="recuperot" extends="payroll.base">
+		<put-attribute name="title" value="Employee recupero"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/recuperot.jsp"></put-attribute>
+	</definition>
+		<definition name="addrecupero" extends="payroll.base">
+		<put-attribute name="title" value="Add recupero"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addrecupero.jsp"></put-attribute>
+	</definition>
+		<definition name="editrecupero" extends="payroll.base">
+		<put-attribute name="title" value="Edit recupero"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editrecupero.jsp"></put-attribute>
+	</definition>
+	<definition name="newaccount" extends="payroll.base">
+		<put-attribute name="includes"
+			value="/WEB-INF/tiles/newaccountscript.jsp"></put-attribute>
+		<put-attribute name="title" value="Create Account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/newaccount.jsp"></put-attribute>
+	</definition>
+	<definition name="createoffer" extends="payroll.base">
+		<put-attribute name="title" value="Create Offer"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/createoffer.jsp"></put-attribute>
+	</definition>
+	<definition name="admin" extends="payroll.base">
+		<put-attribute name="title" value="All Users"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/admin.jsp"></put-attribute>
+	</definition>
+
+	<definition name="accountcreated" extends="payroll.base">
+		<put-attribute name="title" value="Account Created"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/accountcreated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="offercreated" extends="payroll.base">
+		<put-attribute name="title" value="Offer Created"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/offercreated.jsp"></put-attribute>
+	</definition>
+
+	<definition name="error" extends="payroll.base">
+		<put-attribute name="title" value="Error"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/error.jsp"></put-attribute>
+	</definition>
+
+	<definition name="deneid" extends="payroll.base">
+		<put-attribute name="title" value="Access Deneid"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/deneid.jsp"></put-attribute>
+	</definition>
+	<definition name="parameterreq" extends="payroll.base">
+		<put-attribute name="title" value="Access Deneid"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/parameterreq.jsp"></put-attribute>
+	</definition>
+	<definition name="editOffer" extends="payroll.base">
+		<put-attribute name="title" value="Edit Offer"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editOffer.jsp"></put-attribute>
+	</definition>
+	<definition name="editUser" extends="payroll.base">
+		<put-attribute name="includes"
+			value="/WEB-INF/tiles/newaccountscript.jsp"></put-attribute>
+		<put-attribute name="title" value="Edit Account"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editUser.jsp"></put-attribute>
+	</definition>
+
+	<definition name="showContactForm" extends="payroll.base">
+		<put-attribute name="title" value="Send Message"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/contact.jsp"></put-attribute>
+	</definition>
+
+	<definition name="messageSent" extends="payroll.base">
+		<put-attribute name="title" value="Message Send"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/messagesent.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mess" extends="payroll.base">
+		<put-attribute name="title" value="Mesazhet"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/mess.jsp"></put-attribute>
+	</definition>
+
+	<definition name="year" extends="payroll.base">
+		<put-attribute name="title" value="Add year"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/year.jsp"></put-attribute>
+	</definition>
+
+	<definition name="years" extends="payroll.base">
+		<put-attribute name="title" value="Years"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/years.jsp"></put-attribute>
+	</definition>
+
+	<definition name="edityear" extends="payroll.base">
+		<put-attribute name="title" value="Edit Years"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/edityear.jsp"></put-attribute>
+	</definition>
+
+	<definition name="employeesalarystanding" extends="payroll.base">
+		<put-attribute name="title" value="Employee Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/employeesalarystanding.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="allempsalary" extends="payroll.base">
+		<put-attribute name="title" value="All Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/allempsalary.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="searchpaga" extends="payroll.base">
+		<put-attribute name="title" value="Search Raportin"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/searchpaga.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="workingdaystanding" extends="payroll.base">
+		<put-attribute name="title" value="Search Working Days"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/workingdaystanding.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="allworkingsday" extends="payroll.base">
+		<put-attribute name="title" value="All Working Days"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/allworkingsday.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="searchpagaemployee" extends="payroll.base">
+		<put-attribute name="title" value="Search Raport Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/searchpagaemployee.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="aktivpasivet" extends="payroll.base">
+		<put-attribute name="title" value="Aktiv Pasivet"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/aktivpasivet.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="addaktivpasiv" extends="payroll.base">
+		<put-attribute name="title" value="Add Aktiv Pasiv"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addaktivpasiv.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="editaktivpasiv" extends="payroll.base">
+		<put-attribute name="title" value="Edit Aktiv Pasiv"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editaktivpasiv.jsp"></put-attribute>
+	</definition>
+
+	<definition name="pagesat" extends="payroll.base">
+		<put-attribute name="title" value="Pagesat"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/pagesat.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="addpagesen" extends="payroll.base">
+		<put-attribute name="title" value="Add Pagesen"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addpagesen.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="editpagesen" extends="payroll.base">
+		<put-attribute name="title" value="Edit Pagesen"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editpagesen.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="uploadfile" extends="payroll.base">
+		<put-attribute name="title" value="Upload File"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploadfile.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="uploadpagesen" extends="payroll.base">
+		<put-attribute name="title" value="Edit Pagesen"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploadpagesen.jsp"></put-attribute>
+	</definition>
+	<definition name="uploadempjob" extends="payroll.base">
+		<put-attribute name="title" value="Upload Empjob"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploadempjob.jsp"></put-attribute>
+	</definition>
+	<definition name="uploadempbank" extends="payroll.base">
+		<put-attribute name="title" value="Upload Empbank"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploadempbank.jsp"></put-attribute>
+	</definition>
+	<definition name="uploademployee" extends="payroll.base">
+		<put-attribute name="title" value="Upload Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploademployee.jsp"></put-attribute>
+	</definition>
+	<definition name="uploadempenabled" extends="payroll.base">
+		<put-attribute name="title" value="Upload Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploadempenabled.jsp"></put-attribute>
+	</definition>
+		<definition name="uploadsalary" extends="payroll.base">
+		<put-attribute name="title" value="Upload Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/uploadsalary.jsp"></put-attribute>
+	</definition>
+	<definition name="generateexcelworkdays" extends="payroll.base">
+		<put-attribute name="title" value="Excel WorkingDays"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/generateexcelworkdays.jsp"></put-attribute>
+	</definition>
+	<definition name="excelsalarystanding" extends="payroll.base">
+		<put-attribute name="title" value="Excel Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/excelsalarystanding.jsp"></put-attribute>
+	</definition>
+	<definition name="excelemployeeregister" extends="payroll.base">
+		<put-attribute name="title" value="Excel Salary"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/excelemployeeregister.jsp"></put-attribute>
+	</definition>
+	<definition name="sigurimet" extends="payroll.base">
+		<put-attribute name="title" value="Siguracionet"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/sigurimet.jsp"></put-attribute>
+	</definition>
+	<definition name="addsigurimet" extends="payroll.base">
+		<put-attribute name="title" value="Add Siguracionet"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addsigurimet.jsp"></put-attribute>
+	</definition>
+	<definition name="editsigurimet" extends="payroll.base">
+		<put-attribute name="title" value="Edit Sigurimet"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/editsigurimet.jsp"></put-attribute>
+	</definition>
+	<definition name="taksat" extends="payroll.base">
+		<put-attribute name="title" value="Taksat"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/taksat.jsp"></put-attribute>
+	</definition>
+	<definition name="addtaksat" extends="payroll.base">
+		<put-attribute name="title" value="Add Taksat"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/addtaksat.jsp"></put-attribute>
+	</definition>
+	<definition name="edittaksat" extends="payroll.base">
+		<put-attribute name="title" value="Add Taksat"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/edittaksat.jsp"></put-attribute>
+	</definition>
+	<definition name="generateprecenceemployee" extends="payroll.base">
+		<put-attribute name="title" value="Gjenero Excel Presencat Per Employee"></put-attribute>
+		<put-attribute name="content" value="/WEB-INF/tiles/generateprecenceemployee.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
